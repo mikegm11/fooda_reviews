@@ -34,7 +34,11 @@
       </dt>
       <!-- Display item_id start -->
       <dd>
-        <%= @favorite.item_id %>
+        <% if @favorite.item.present? %>
+          <a href="/items/<%= @favorite.item_id %>">
+            <%= @favorite.item.restaurant_id %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display item_id end -->
 
@@ -43,7 +47,11 @@
       </dt>
       <!-- Display user_id start -->
       <dd>
-        <%= @favorite.user_id %>
+        <% if @favorite.user.present? %>
+          <a href="/users/<%= @favorite.user_id %>">
+            <%= @favorite.user.email %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display user_id end -->
 

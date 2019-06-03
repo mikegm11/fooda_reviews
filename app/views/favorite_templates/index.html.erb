@@ -58,13 +58,21 @@
 
         <!-- Display favorite.item_id start -->
         <td>
-          <%= favorite.item.restaurant_id %>
+          <% if favorite.item.present? %>
+            <a href="/items/<%= favorite.item.id %>">
+              <%= favorite.item.restaurant_id %>
+            </a>
+          <% end %>
         </td>
         <!-- Display favorite.item_id end -->
 
         <!-- Display favorite.user_id start -->
         <td>
-          <%= favorite.user.email %>
+          <% if favorite.user.present? %>
+            <a href="/users/<%= favorite.user.id %>">
+              <%= favorite.user.email %>
+            </a>
+          <% end %>
         </td>
         <!-- Display favorite.user_id end -->
 

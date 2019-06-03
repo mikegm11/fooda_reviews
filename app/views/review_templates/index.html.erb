@@ -78,13 +78,21 @@
 
         <!-- Display review.item_id start -->
         <td>
-          <%= review.item.restaurant_id %>
+          <% if review.item.present? %>
+            <a href="/items/<%= review.item.id %>">
+              <%= review.item.restaurant_id %>
+            </a>
+          <% end %>
         </td>
         <!-- Display review.item_id end -->
 
         <!-- Display review.user_id start -->
         <td>
-          <%= review.user.email %>
+          <% if review.user.present? %>
+            <a href="/users/<%= review.user.id %>">
+              <%= review.user.email %>
+            </a>
+          <% end %>
         </td>
         <!-- Display review.user_id end -->
 

@@ -34,7 +34,11 @@
       </dt>
       <!-- Display restaurant_id start -->
       <dd>
-        <%= @item.restaurant_id %>
+        <% if @item.restaurant.present? %>
+          <a href="/restaurants/<%= @item.restaurant_id %>">
+            <%= @item.restaurant.cuisine %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display restaurant_id end -->
 
