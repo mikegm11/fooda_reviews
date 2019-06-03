@@ -11,28 +11,23 @@
         </a>
       </div>
 
-      <!-- Edit link item start -->
       <div class="col">
         <a href="/items/<%= @item.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit item
         </a>
       </div>
-      <!-- Edit link item end -->
 
-      <!-- Delete link item start -->
       <div class="col">
         <a href="/delete_item/<%= @item.id %>" class="btn btn-block btn-outline-secondary">
           Delete item
         </a>
       </div>
-      <!-- Delete link item end -->
     </div>
 
     <dl>
       <dt>
         Restaurant
       </dt>
-      <!-- Display restaurant_id start -->
       <dd>
         <% if @item.restaurant.present? %>
           <a href="/restaurants/<%= @item.restaurant_id %>">
@@ -40,66 +35,52 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display restaurant_id end -->
 
       <dt>
         Name
       </dt>
-      <!-- Display name start -->
       <dd>
         <%= @item.name %>
       </dd>
-      <!-- Display name end -->
 
       <dt>
         Vegetarian
       </dt>
-      <!-- Display vegetarian start -->
       <dd>
         <%= @item.vegetarian %>
       </dd>
-      <!-- Display vegetarian end -->
 
       <dt>
         Vegan
       </dt>
-      <!-- Display vegan start -->
       <dd>
         <%= @item.vegan %>
       </dd>
-      <!-- Display vegan end -->
 
       <dt>
         Description
       </dt>
-      <!-- Display description start -->
       <dd>
         <%= @item.description %>
       </dd>
-      <!-- Display description end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@item.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@item.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
 <div class="row mb-3">
   <div class="col-md-8 offset-md-2">
     <%= render partial: "item_templates/item_reviews" %>
@@ -111,4 +92,3 @@
     <%= render partial: "item_templates/item_favorites" %>
   </div>
 </div>
-<!-- Show Page Customization end -->

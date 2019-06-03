@@ -10,11 +10,9 @@
   <ul class="list-group list-group-flush">
     <% @user.reviews.each do |review| %>
       <li class="list-group-item d-flex align-items-center justify-content-between">
-        <!-- Show link start -->
         <a href="/reviews/<%= review.id %>">
           <%= review.item_id %>
         </a>
-        <!-- Show link end -->
 
       </li>
     <% end %>

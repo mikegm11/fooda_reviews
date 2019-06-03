@@ -1,4 +1,3 @@
-<!-- Validation failure messages -->
 <% if @favorite.errors.any? %>
   <% @favorite.errors.full_messages.each do |message| %>
     <div class="alert">
@@ -13,33 +12,23 @@
 
 <hr>
 
-<!-- Form favorite start -->
 <form action="/update_favorite/<%= @favorite.id %>" method="post">
-<!-- Form favorite end -->
 
-  <!-- Label and input for item_id start -->
   <div class="form-group">
     <label for="item_id">
       Item
     </label>
 
-    <!-- Input for item_id start -->
     <%= select_tag(:item_id, options_from_collection_for_select(Item.all, :id, :restaurant_id, @favorite.item_id), :class => "form-control") %>
-    <!-- Input for item_id end -->
   </div>
-  <!-- Label and input for item_id end -->
 
-  <!-- Label and input for user_id start -->
   <div class="form-group">
     <label for="user_id">
       User
     </label>
 
-    <!-- Input for user_id start -->
     <%= select_tag(:user_id, options_from_collection_for_select(User.all, :id, :email, @favorite.user_id), :class => "form-control") %>
-    <!-- Input for user_id end -->
   </div>
-  <!-- Label and input for user_id end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Update favorite

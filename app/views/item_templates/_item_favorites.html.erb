@@ -10,26 +10,20 @@
   <ul class="list-group list-group-flush">
     <% @item.favorites.each do |favorite| %>
       <li class="list-group-item d-flex align-items-center justify-content-between">
-        <!-- Show link start -->
         <a href="/favorites/<%= favorite.id %>">
           <%= favorite.item_id %>
         </a>
-        <!-- Show link end -->
 
-        <!-- Delete link start -->
         <a href="/delete_favorite_from_item/<%= favorite.id %>">
           Delete
         </a>
-        <!-- Delete link end -->
 
       </li>
     <% end %>
 
     <div class="card-footer">
       <div class="collapse" id="item_favorites_new_form">
-        <!-- New associationcollection form start -->
         <%= render partial: "item_templates/item_favorites_new_form" %>
-        <!-- New associationcollection form end -->
       </div>
     </div>
 
