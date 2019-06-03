@@ -22,7 +22,7 @@ class ReviewsController < ApplicationController
 
     @review.item_id = params.fetch("item_id")
     @review.user_id = params.fetch("user_id")
-    @review.picture = params.fetch("picture")
+    @review.picture = params.fetch("picture") if params.key?("picture")
     @review.review = params.fetch("review")
     @review.rating = params.fetch("rating")
     @review.orderagain = params.fetch("orderagain")
@@ -42,7 +42,7 @@ class ReviewsController < ApplicationController
 
     @review.item_id = params.fetch("item_id")
     @review.user_id = params.fetch("user_id")
-    @review.picture = params.fetch("picture")
+    @review.picture = params.fetch("picture") if params.key?("picture")
     @review.review = params.fetch("review")
     @review.rating = params.fetch("rating")
     @review.orderagain = params.fetch("orderagain")
@@ -68,7 +68,7 @@ class ReviewsController < ApplicationController
 
     @review.item_id = params.fetch("item_id")
     @review.user_id = params.fetch("user_id")
-    @review.picture = params.fetch("picture")
+    @review.picture = params.fetch("picture") if params.key?("picture")
     @review.review = params.fetch("review")
     @review.rating = params.fetch("rating")
     @review.orderagain = params.fetch("orderagain")
