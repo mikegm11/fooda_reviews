@@ -1,0 +1,104 @@
+<h1>
+  Add a new review
+</h1>
+
+
+<hr>
+
+<!-- Form review start -->
+<form action="/create_review" method="post">
+<!-- Form review end -->
+
+  <!-- Label and input for item_id start -->
+  <div class="form-group">
+    <label for="item_id">
+      Item
+    </label>
+
+    <!-- Input for item_id start -->
+    <input type="text" id="item_id" name="item_id" class="form-control">
+    <!-- Input for item_id end -->
+  </div>
+  <!-- Label and input for item_id end -->
+
+  <!-- Label and input for user_id start -->
+  <div class="form-group">
+    <label for="user_id">
+      User
+    </label>
+
+    <!-- Input for user_id start -->
+    <input type="text" id="user_id" name="user_id" class="form-control">
+    <!-- Input for user_id end -->
+  </div>
+  <!-- Label and input for user_id end -->
+
+  <!-- Label and input for picture start -->
+  <div class="form-group">
+    <label for="picture">
+      Picture
+    </label>
+
+    <!-- Input for picture start -->
+    <input type="text" id="picture" name="picture" class="form-control">
+    <!-- Input for picture end -->
+  </div>
+  <!-- Label and input for picture end -->
+
+  <!-- Label and input for review start -->
+  <div class="form-group">
+    <label for="review">
+      Review
+    </label>
+
+    <!-- Input for review start -->
+    <input type="text" id="review" name="review" class="form-control">
+    <!-- Input for review end -->
+  </div>
+  <!-- Label and input for review end -->
+
+  <!-- Label and input for rating start -->
+  <div class="form-group">
+    <label for="rating">
+      Rating
+    </label>
+
+    <!-- Input for rating start -->
+    <input type="text" id="rating" name="rating" class="form-control">
+    <!-- Input for rating end -->
+  </div>
+  <!-- Label and input for rating end -->
+
+  <!-- Label and input for orderagain start -->
+  <div class="form-check">
+    <input type="hidden" value="0" name="orderagain">
+    <!-- Input for orderagain start -->
+    <input id="orderagain" class="form-check-input" name="orderagain" type="checkbox">
+    <!-- Input for orderagain end -->
+    <label for="orderagain" class="form-check-label">
+      Orderagain
+    </label>
+  </div>
+
+  <!-- Label and input for name start -->
+  <div class="form-group">
+    <label for="name">
+      Name
+    </label>
+
+    <!-- Input for name start -->
+    <input type="text" id="name" name="name" class="form-control">
+    <!-- Input for name end -->
+  </div>
+  <!-- Label and input for name end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create review
+  </button>
+</form>
+
+<hr>
+
+<a href="/reviews">
+  Go back
+</a>
