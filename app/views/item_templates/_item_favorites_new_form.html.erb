@@ -1,0 +1,25 @@
+<!-- Form favorite start -->
+<form action="/create_favorite_from_item" method="post">
+<!-- Form favorite end -->
+
+  <!-- Label and input for item_id start -->
+  <!-- Input for item_id start -->
+  <input type="hidden" name="item_id" value="<%= @item.id %>">
+  <!-- Input for item_id end -->
+
+  <!-- Label and input for user_id start -->
+  <div class="form-group">
+    <label for="user_id">
+      User
+    </label>
+
+    <!-- Input for user_id start -->
+    <input type="text" id="user_id" name="user_id" class="form-control" value="<%= @favorite.user_id %>">
+    <!-- Input for user_id end -->
+  </div>
+  <!-- Label and input for user_id end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create favorite
+  </button>
+</form>
