@@ -13,17 +13,21 @@
 
       <!-- Edit link review start -->
       <div class="col">
-        <a href="/reviews/<%= @review.id %>/edit" class="btn btn-block btn-outline-secondary">
-          Edit review
-        </a>
+        <% if current_user == @review.user %>
+          <a href="/reviews/<%= @review.id %>/edit" class="btn btn-block btn-sm btn-outline-secondary">
+            Edit review
+          </a>
+        <% end %>
       </div>
       <!-- Edit link review end -->
 
       <!-- Delete link review start -->
       <div class="col">
-        <a href="/delete_review/<%= @review.id %>" class="btn btn-block btn-outline-secondary">
-          Delete review
-        </a>
+        <% if current_user == @review.user %>
+          <a href="/delete_review/<%= @review.id %>" class="btn btn-block btn-sm btn-outline-secondary">
+            Delete review
+          </a>
+        <% end %>
       </div>
       <!-- Delete link review end -->
     </div>
