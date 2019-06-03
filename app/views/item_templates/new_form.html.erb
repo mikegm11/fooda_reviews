@@ -1,0 +1,79 @@
+<h1>
+  Add a new item
+</h1>
+
+
+<hr>
+
+<!-- Form item start -->
+<form action="/create_item" method="post">
+<!-- Form item end -->
+
+  <!-- Label and input for restaurant_id start -->
+  <div class="form-group">
+    <label for="restaurant_id">
+      Restaurant
+    </label>
+
+    <!-- Input for restaurant_id start -->
+    <input type="text" id="restaurant_id" name="restaurant_id" class="form-control">
+    <!-- Input for restaurant_id end -->
+  </div>
+  <!-- Label and input for restaurant_id end -->
+
+  <!-- Label and input for name start -->
+  <div class="form-group">
+    <label for="name">
+      Name
+    </label>
+
+    <!-- Input for name start -->
+    <input type="text" id="name" name="name" class="form-control">
+    <!-- Input for name end -->
+  </div>
+  <!-- Label and input for name end -->
+
+  <!-- Label and input for vegetarian start -->
+  <div class="form-check">
+    <input type="hidden" value="0" name="vegetarian">
+    <!-- Input for vegetarian start -->
+    <input id="vegetarian" class="form-check-input" name="vegetarian" type="checkbox">
+    <!-- Input for vegetarian end -->
+    <label for="vegetarian" class="form-check-label">
+      Vegetarian
+    </label>
+  </div>
+
+  <!-- Label and input for vegan start -->
+  <div class="form-check">
+    <input type="hidden" value="0" name="vegan">
+    <!-- Input for vegan start -->
+    <input id="vegan" class="form-check-input" name="vegan" type="checkbox">
+    <!-- Input for vegan end -->
+    <label for="vegan" class="form-check-label">
+      Vegan
+    </label>
+  </div>
+
+  <!-- Label and input for description start -->
+  <div class="form-group">
+    <label for="description">
+      Description
+    </label>
+
+    <!-- Input for description start -->
+    <input type="text" id="description" name="description" class="form-control">
+    <!-- Input for description end -->
+  </div>
+  <!-- Label and input for description end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create item
+  </button>
+</form>
+
+<hr>
+
+<a href="/items">
+  Go back
+</a>
