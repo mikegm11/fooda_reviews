@@ -1,0 +1,65 @@
+<!-- Validation failure messages -->
+<% if @restaurant.errors.any? %>
+  <% @restaurant.errors.full_messages.each do |message| %>
+    <div class="alert">
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<h1>
+  Edit restaurant #<%= @restaurant.id %>
+</h1>
+
+<hr>
+
+<!-- Form restaurant start -->
+<form action="/update_restaurant/<%= @restaurant.id %>" method="post">
+<!-- Form restaurant end -->
+
+  <!-- Label and input for cuisine start -->
+  <div class="form-group">
+    <label for="cuisine">
+      Cuisine
+    </label>
+
+    <!-- Input for cuisine start -->
+    <input type="text" id="cuisine" name="cuisine" class="form-control" value="<%= @restaurant.cuisine %>">
+    <!-- Input for cuisine end -->
+  </div>
+  <!-- Label and input for cuisine end -->
+
+  <!-- Label and input for location start -->
+  <div class="form-group">
+    <label for="location">
+      Location
+    </label>
+
+    <!-- Input for location start -->
+    <input type="text" id="location" name="location" class="form-control" value="<%= @restaurant.location %>">
+    <!-- Input for location end -->
+  </div>
+  <!-- Label and input for location end -->
+
+  <!-- Label and input for website start -->
+  <div class="form-group">
+    <label for="website">
+      Website
+    </label>
+
+    <!-- Input for website start -->
+    <input type="text" id="website" name="website" class="form-control" value="<%= @restaurant.website %>">
+    <!-- Input for website end -->
+  </div>
+  <!-- Label and input for website end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update restaurant
+  </button>
+</form>
+
+<hr>
+
+<a href="/restaurants">
+  Go back
+</a>
